@@ -1,6 +1,6 @@
 <?php
 
-namespace Muscobytes\Laravel\TrailtsCollection\Command;
+namespace Muscobytes\Laravel\TraitsCollection\Console\Command;
 
 trait TableFormatter
 {
