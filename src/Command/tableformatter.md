@@ -3,6 +3,9 @@ The TableFormatter trait provides utility functions for formatting table rows wi
 console output. It includes methods to truncate values to fit within defined column widths and to generate formatted
 rows based on these specifications.
 
+## Requirement
+- 'php-ext-mbstring'
+
 ## Namespace
 ```php
 Muscobytes\Laravel\TraitsCollection\Command
