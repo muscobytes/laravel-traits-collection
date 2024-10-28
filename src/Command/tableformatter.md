@@ -24,7 +24,7 @@ class MyCommand extends Command
 {
     use TableFormatter;
     
-        /**
+    /**
      * The name and signature of the console command.
      *
      * @var string
@@ -42,7 +42,7 @@ class MyCommand extends Command
     public function handle(): void
     {
         $row = ['Name' => 'John Doe', 'Role' => 'Developer'];
-        $widths = ['Name' => 15, 'Role' => 20];
+        $widths = [ 15, 20 ];
 
         $this->info(
             $this->formatRow($row, $widths)
