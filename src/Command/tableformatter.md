@@ -4,7 +4,7 @@ console output. It includes methods to truncate values to fit within defined col
 rows based on these specifications.
 
 ## Requirement
-- 'php-ext-mbstring'
+- `php-ext-mbstring`
 
 ## Namespace
 ```php
