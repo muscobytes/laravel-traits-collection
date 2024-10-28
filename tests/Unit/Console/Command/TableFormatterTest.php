@@ -23,5 +23,13 @@ class TableFormatterTest extends BaseTest
             'third column value'
         ]);
         $this->assertEquals('random              some string that s… third column value  ', $result);
+
+        $result = $class->formatRow([
+            'random',
+            'some string that should be truncated because of it\'s length',
+            'third column value'
+        ], [5, 10, 10]);
+        $this->assertEquals('ran… some str… third co… ', $result);
+
     }
 }
