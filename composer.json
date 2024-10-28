@@ -1,0 +1,29 @@
+{
+    "name": "muscobytes/laravel-traits-collection",
+    "version": "1.0.0",
+    "type": "library",
+    "require": {
+        "php": ">=8.2",
+        "laravel/framework": "^11.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Muscobytes\\Laravel\\TraitsCollection\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Muscobytes\\Laravel\\TraitsCollection\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    }
+}
