@@ -30,6 +30,5 @@ class TableFormatterTest extends BaseTest
             'third column value'
         ], [5, 10, 10]);
         $this->assertEquals('ran… some str… third co… ', $result);
-
     }
 }
