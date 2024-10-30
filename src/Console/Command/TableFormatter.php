@@ -1,10 +1,49 @@
 <?php
+/**
+ * TableFormatter
+ * The TableFormatter trait provides utility functions for formatting table rows with specified column widths, ideal for
+ * console output. It includes methods to truncate values to fit within defined column widths and to generate formatted
+ * rows based on these specifications.
+ *
+ * ## Installation
+ * To use this trait in your Laravel project, include it within any class where you want to format table rows. Ensure the
+ * class imports the trait and Laravel's autoloading recognizes it.
+ *
+ * ## Usage
+ * ```php
+ *  use Illuminate\Console\Command;
+ *  use Muscobytes\Laravel\TraitsCollection\Command\TableFormatter;
+ *
+ *  class MyCommand extends Command
+ *  {
+ *      use TableFormatter;
+ *
+ *      protected $signature = 'app:mycommand';
+ *
+ *      protected $description = 'Example command';
+ *
+ *      public function handle(): void
+ *      {
+ *          $row = ['Name' => 'John Doe', 'Role' => 'Developer'];
+ *          $widths = [ 15, 20 ];
+ *
+ *          $this->formatRow($row, $widths);
+ *      }
+ *  }
+ *
+ * This trait is designed primarily for console output where fixed-width columns are required.
+ * The trait assumes multi-byte encoding compatibility using PHP's mb_ string functions for accurate truncation.
+ *
+ * ## License
+ * This trait is open-source and can be freely used within any project compliant with the MIT License.
+ */
 
 namespace Muscobytes\Laravel\TraitsCollection\Console\Command;
 
 trait TableFormatter
 {
     protected const DEFAULT_COLUMN_WIDTH = 20;
+
 
     protected function arrayCombineKeys(
         array $array1,
