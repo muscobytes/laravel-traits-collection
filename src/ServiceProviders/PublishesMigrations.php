@@ -44,6 +44,7 @@ trait PublishesMigrations
                 $i = 0;
                 foreach ($this->app->make('files')->allFiles($directory) as $file) {
                     yield $file->getPathname() => $this->app->databasePath(
+                        'migrations/' .
                         preg_replace(
                             pattern: '/([0-9]{4}_[0-9]{2}_[0-9]{2}_[0-9]{6})/',
                             replacement: now()->addSeconds(++$i)->format('Y_m_d_His'),
