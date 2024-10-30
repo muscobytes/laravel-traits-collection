@@ -13,10 +13,7 @@
  *     public function boot(): void
  *     {
  *         $this->publishMigrations();
- *
- *         // ...
  *     }
- *
  *
  */
 
@@ -24,10 +21,11 @@ namespace Muscobytes\Laravel\TraitsCollection\ServiceProviders;
 
 use Generator;
 use Illuminate\Contracts\Container\BindingResolutionException;
+use Illuminate\Contracts\Foundation\Application;
 
 /**
- * @property $app
- * @method publishes(array $array, string $path)
+ * @property Application $app
+ * @method void publishes(array $paths, mixed $groups = null)
  */
 trait PublishesMigrations
 {
